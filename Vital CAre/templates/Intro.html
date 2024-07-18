@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hospital</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    
+        
+        header {
+            text-align: left;
+            padding: 50px;
+            background-color: #050dabda;
+            color: white;
+        }   
+        
+        .horizontal {
+            list-style: none;
+            display: flex;
+            background-color: rgb(248, 245, 242) ;
+            padding: 20px;
+        }
+        
+        .horizontal li {
+            margin: 0 20px;
+            float:left;
+        }
+        
+        .horizontal a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .vertical {
+            list-style: none;
+            padding: 5;
+            text-align: left;
+        }
+        
+        .vertical li {
+            margin: 10px 0;
+        }
+        
+        .vertical a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display:contents;
+            border-radius: 5px;
+        }
+        
+        
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        nav h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        nav ul {
+            font-size: 10px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            font-size: 10px;
+            margin-right: 20px;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: wavy;
+            
+            font-size: 30px;;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        nav a:hover {
+            color: #ecf0f1;
+        }
+        .search-box {
+            margin-left: 50px;
+            height: px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input[type="text"] {
+            padding: 8px;
+            border: none;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            background-color: #fff;
+            padding: 8px;
+            border: none;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-blend-mode: luminosity;
+        }
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        #image-frame {
+            width: 906px;
+            height: 793px;
+            border: 10px solid #3498db; /* Adjust the border color as needed */
+            overflow: hidden;
+            margin: 50px auto; /* Adjust margin for positioning */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow effect */
+        }
+        .framed-image {
+         width: 100%;
+         height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the frame */
+        }
+        #button-frame {
+            flex: 1;
+            font-size: 70px;
+            background-color: #3498db;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: auto;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        #button-frame a {
+            text-decoration: none;
+            
+            font-size: 70px;
+        }
+
+        #button-frame button {
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            height: 450px;
+            border: none;
+            cursor: pointer;
+            
+            font-size: 30px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #button-frame button:hover {
+            background-color: #297fb8;
+            color: #fff;
+        }
+
+        .a {
+            background-image: url('https://img.freepik.com/free-photo/flat-lay-desk-calendar-clock_23-2148693392.jpg?w=826&t=st=1705556324~exp=1705556924~hmac=51250211b6890d62bc47f449103a6a7d2634ec1abd06e7c52b68041b7b0ad016');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 70px;
+        }
+
+        /* Additional styles for other buttons */
+        .b{
+            background-image: url('https://cdn.pixabay.com/photo/2021/10/11/17/37/doctor-6701410_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .c {
+            background-image: url('https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?w=996&t=st=1705556313~exp=1705556913~hmac=49c708a6d5a690d6bc3bb201fa12f50acb7fb49602baec524be05076867bdbb4');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .d{
+            background-image: url('https://www.ihd.ae/sites/ihd/files/styles/main_image/public/default_images/bg.jpg?itok=dnqZKMpm');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        footer {
+            background-color: #050dabda;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        function handleSearch() {
+            var searchText = document.getElementById("searchInput").value;
+            // Perform actions with the searchText, such as searching or displaying results
+            alert("Search clicked! Text: " + searchText);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://www.dyp-atu.org/wp-content/uploads/2021/06/DYPATU-Logo.svg" alt="Left Logo">
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5501/intro.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/templates/app_log.html">Appointment</a></li>
+            <li><a href="http://127.0.0.1:5501/templates/contact.html">Contact Us</a></li>
+            <li><a href="#policy">Policy</a></li>
+        </ul>
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <button type="button" onclick="handleSearch()">Search</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="image-frame">
+            <img src="https://basic-tutorials.com/wp-content/uploads/2022/07/amazon-one-medical.jpg" alt="Framed Image" class="framed-image">
+        </div>
+
+        <div id="button-frame">
+           <a href="http://127.0.0.1:5501/templates/app_log.html"><button class="a">Make an Appointment</button></a>
+            <a href="#doctor"><button class="b">Find a Doctor</button></a>
+            <a href="http://127.0.0.1:5501/templates/contact.html"><button class="c">Contact Us</button></a>
+            <a href="http://127.0.0.1:5501/index2.html"><button class="d">Patient Guide</button></a>
+        </div>
+    </main>
+    <footer>
+        <div style="background-color: #050dabda; color: white; padding: 20px; text-align: center;">
+            <p>&copy; 2024 D Y Patil Hospital. All rights reserved.</p>
+            <p>Contact: info@DYPhospital.com</p>
+        </div>
+    </footer>
+</body>
+</html>

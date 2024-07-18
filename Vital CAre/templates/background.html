@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospital</title>
+
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://img.freepik.com/free-photo/empty-hallway-background_23-2149408808.jpg?w=900&t=st=1701183065~exp=1701183665~hmac=3eae499b5a2148fde9dbab677878b9804d8d0b248781f8f8151e76226f541184');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            bottom: -300px;
+            height: 100vh; /* Ensures that the background covers the full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Additional styles for your content */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+            
+           
+        }
+         
+        }
+          main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        } 
+        
+        .horizontal {
+            list-style: none;
+            display: flex;
+            background-color: rgb(248, 245, 242) ;
+            padding: 20px;
+        }
+        
+        .horizontal li {
+            margin: 0 20px;
+            float:left;
+        }
+        
+        .horizontal a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .vertical {
+            list-style: none;
+            padding: 5;
+            text-align: left;
+        }
+        
+        .vertical li {
+            margin: 10px 0;
+        }
+        
+        .vertical a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display:contents;
+            border-radius: 5px;
+        }      
+         .banner {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Roboto' sans-serif;
+        }
+        .signup {
+            width: 360px;
+            height: 850px;
+            margin: auto;
+            
+            border-radius: 5px;
+        }
+
+        h1 {
+            margin-left: 85px;
+            padding-top: 15px;
+        }
+
+        form {
+            width: 300px;
+
+            margin: left 20px;
+            background-color: transparent;
+            border-radius: 10px;
+        }
+
+        form > label {
+            display: flex;
+            margin-top: 20px;
+            font-size: 18px;
+            margin-left: 20px;
+            color: rgb(255, 255, 255)
+        }
+
+        form input {
+            margin-left: 20px;
+            width: 80%;
+            padding: 7px;
+            border: none;
+            border: 1px solid black;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        input[type="button"] {
+            width: 300px;
+            height: 35px;
+            margin-top: 20px;
+            border: none;
+            background-color: greenyellow;
+            color: white;
+            font-size: 18px;
+        }
+
+        p {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 15px;
+        }
+
+        .demo {
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            margin-top: -10px;
+        }
+
+        .demo a {
+            color: darkgreen
+        }
+
+        .login {
+            width: 360px;
+            height: 280px;
+            margin: auto;
+            border-radius: 3px;
+            background-color: white;
+        }
+
+        .sub {
+            margin-left: -2px;
+            width: 100px;
+        }
+        footer {
+            background-color: #050dabda;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+    <script>   
+        
+        function handleSearch() {
+            var searchText = document.getElementById("searchInput").value;
+            alert("Search clicked! Text: " + searchText);
+        }
+
+        function validateform() {
+            var pat_name = document.myform.name.value;
+            Pat_Phone_number = document.myform.mobile_no.value;
+            Pat_address = document.myform.address.value;
+            Pat_Gmail_ID = document.myform.Gmail.value;
+            Pat_Blood_Group = document.myform.dropdown.value;
+            Pat_Symptoms = document.myform.symptoms.value;
+            Pat_Date_of_birth = document.myform.date_of_birth.value;
+            Pat_city = document.myform.city.value;
+            Pat_State = document.myform.state.value;
+            Pat_Nationality = document.myform.nationality.value;
+            
+
+            if (pat_name == null || pat_name == "") {
+                alert("Name can't be blank");
+                return false;
+            }
+            if (Pat_Phone_number == null || Pat_Phone_number == "") {
+                alert("Input your phone number");
+                return false;
+            }
+            if (Pat_address == null || Pat_address == "") {
+                alert("Address can't be blank");
+                return false;
+            }
+            if (Pat_Gmail_ID == null || Pat_Gmail_ID == "") {
+                alert("Input valid ID");
+                return false;
+            }
+            if (Pat_Symptoms == null || Pat_Symptoms == "") {
+                alert("You can also write '---' if you don't know symptoms");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+  
+    <div class="banner">
+            <div class="signup">
+                <h1>Sign up</h1>
+                <form name="myform" method="POST" enctype="multipart/form-data" action="{{ url_for('signup') }}" onsubmit="return validateform()">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <label>Mobile No</label>
+                    <input type="number" name="mobile_no" placeholder="+91" pattern="[0-9]+" required>
+                    <label>Address</label>
+                    <textarea name="address" style="margin-left:20px; border-radius: 6px;" rows="4" cols="29" required></textarea>
+                    <label>Gmail</label>
+                    <input type="text" name="Gmail">
+                    <label>Blood Group</label>
+                    <select name="dropdown">
+                        <option value="unknown">unknown</option>
+                        <option value="A+">A+</option>
+                        <option value="O+">O+</option>
+                        <option value="A-">A-</option>
+                        <option value="O-">O-</option>
+                        <option value="A+">A+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                    </select>
+                    <label>Symptoms</label>
+                    <input type="text" name="symptoms" placeholder="Enter patient Symptoms">
+                    <label>Date Of Birth</label>
+                    <input type="date" name="date_of_birth" required>
+                    <label>City</label>
+                    <input type="text" name="city" required>
+                    <label>State</label>
+                    <input type="text" name="state" required>
+                    <label>Nationality</label>
+                    <input type="text" name="nationality" required>
+                    <input type="file" name="image">
+                    <button type="submit" class="sub">Submit</button>
+                </form>
+           
+            <p>By clicking on submit you are agree to our <br> <a href="#">Terms and Conditions</a> and <a href="#">
+                    Policy and Privacy</a> </p>
+                    <p class="demo">Already have an account? <a href="index2.html">Login here</a></p>
+        </div>
+
+    </div>
+    <footer>
+        <div style="background-color: #050dabda; color: white; padding: 20px; text-align: center;">
+            <p>&copy; 2024 D Y Patil Hospital. All rights reserved.</p>
+            <p>Contact: info@DYPhospital.com</p>
+        </div>  
+    </footer>
+</body>
+
+</html>

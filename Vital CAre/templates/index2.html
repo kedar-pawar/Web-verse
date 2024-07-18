@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Appointment login</title>
+    <style>
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-image: URL('https://img.freepik.com/free-photo/empty-hallway-background_23-2149408808.jpg?w=900&t=st=1701183065~exp=1701183665~hmac=3eae499b5a2148fde9dbab677878b9804d8d0b248781f8f8151e76226f541184');
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: left;
+            padding: 50px;
+            background-color: #050dabda;
+            color: white;
+        }
+        .logo {
+            width: 400px;
+            height: 300px;
+            background-blend-mode: luminosity;
+        }
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        nav h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        nav ul {
+            font-size: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: wavy;
+            
+            font-size: 30px;;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        nav a:hover {
+            color: #ecf0f1;
+        }
+
+        .search-box {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            background-color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-blend-mode: luminosity;
+        }
+        .login {
+            width: 400px; 
+            height:400px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 100px;
+            box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.1);
+            margin-top: 500px; /* Adjust top margin as needed */
+            margin-bottom: 500px;
+            font-size:30px;;
+        }
+
+        .sub {
+            width: 100%;
+            height: 35px;
+            margin-top: 10px;
+            border: none;
+            background-color: greenyellow;
+            color: black;
+            font-size: 18px;
+            cursor: pointer; /* Add this line to make the button clickable */
+        }
+
+
+        .horizontal {
+            list-style: none;
+            display: flex;
+            background-color: rgb(248, 245, 242);
+            padding: 20px;
+        }
+
+        .horizontal li {
+            margin: 0 20px;
+            flex: 1;
+        }
+
+        .horizontal a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .vertical {
+            list-style: none;
+            padding: 5;
+            text-align: left;
+        }
+
+        .vertical li {
+            margin: 10px 0;
+        }
+
+        .vertical a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        #image-frame {
+            width: 906px;
+            height: 793px;
+            border: 10px solid #3498db;
+            overflow: hidden;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .framed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #button-frame {
+            flex: 1;
+            background-color: #3498db;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+
+        #button-frame button {
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            height: 450px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        footer {
+            background-color: #050dabda;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+    <script>
+        function validateform() {
+           var pat_id = request.form.get('Pat_ID')
+            var patName = document.myform.Patname.value;
+    
+            if (patID == null || patID === "" || isNaN(patID)) {
+                alert("Enter a valid Patient ID");
+                return false;
+            }
+    
+            if (patName == null || patName === "" || !/^[A-Za-z]+$/.test(patName)) {
+                alert("Enter a valid Patient Name");
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://www.dyp-atu.org/wp-content/uploads/2021/06/DYPATU-Logo.svg" alt="Left Logo">
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5501/intro.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5501/templates/app_log.html">Appointment</a></li>
+            <li><a href="http://127.0.0.1:5501/templates/contact.html">Contact Us</a></li>
+            <li><a href="#policy">Policy</a></li>
+        </ul>
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search...">
+            <button type="button" onclick="handleSearch()">Search</button>
+        </div>
+    </nav>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <form action="/process_login" method="post" onsubmit="return validateform()">
+            <label for="Pat_ID">Patient ID</label>
+            <input type="number" id="Pat_ID" name="Pat_ID" pattern="[0-9]+" required><br>
+            <label for="Patname">Patient Name</label>
+            <input type="text" id="Patname" name="Patname" required><br>
+            <button type="submit" class="sub">Submit</button>
+        </form>
+        <p >No account? Create a new one <a href="{{ url_for('signup') }}">signup here</a></p>
+    </div>
+    
+    <footer>
+        <div style="background-color: #050dabda; color: white; padding: 20px; text-align: center;">
+            <p>&copy; 2024 D Y Patil Hospital. All rights reserved.</p>
+            <p>Contact: info@DYPhospital.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
