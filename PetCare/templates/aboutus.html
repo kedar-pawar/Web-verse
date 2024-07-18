@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Petcare Website</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="top">
+            <div class="logo">Happy Pets</div>
+            <div class="nav">
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('services') }}">Services</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('team') }}">Team</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <section id="aboutUs">
+            <img src="{{ url_for('static', filename='images/about.jpeg') }}" alt="pet lover">
+            <div class="content">
+                <h2>About Us</h2>
+                <p class="About US">
+                    Your pet deserves the best care even when you’re not around. 
+                    Will that be possible? Of course, it will be! With the pet care firms that offer such services, you can expect your pet to be comfortable and secure. 
+                    Check out our pet care website that will inspire you to craft yours wonderfully. 
+                    Happy Pet website is dedicated to providing the best quality care for your pet. 
+                </p>
+            </div>
+        </section>
+    
+    </body>
+    </html>
+    

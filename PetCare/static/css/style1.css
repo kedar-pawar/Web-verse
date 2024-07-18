@@ -1,0 +1,172 @@
+/**********for service page style*******/
+
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    width: 99%;
+    height: 97%;
+    background-image: url('/static/images/Background2.png');
+    background-size:cover;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    align-items:center;
+    padding:0px 40px;
+}
+.logo{
+    font-size: 50px;
+    color:orange;
+    font-style: italic;
+}
+.nav{
+    position: relative;
+    left:-80px;
+}
+a{
+    padding:5px 15px;
+    color:orange;
+    font-size: 20px;
+    text-decoration:none;
+}
+a:hover{
+    color:white;
+    text-decoration: underline;
+    text-underline-position:under;
+}
+.search{
+    font-size: 25px;
+}
+.search i{
+    padding:5px 20px;
+}
+.search i:hover{
+    color:white;
+}
+  .section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px ;
+    margin-right: 120px;
+  }
+  .column {
+    width: 70%;
+    padding: 0 6em 5em 5em;
+    text-align: center;
+  }
+  .card {
+    width: 130%;
+    height: 100%;
+    padding: 2em 1em;
+    background: linear-gradient(#ffffff 50%, #FFA500 50%);
+    background-size: 100% 206%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #120f09;
+    margin: 1em 0;
+  }
+  p {
+    color: #161618;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  .button{
+    background:  #FFA500;
+    border-radius: 999px;
+    box-shadow: #ffff 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #ffff;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+  }
+  .button:hover{
+    color: #120f09;
+    text-decoration: underline;
+    text-underline-position:under;
+}
+  .icon-wrapper {
+    background-color: #FFA500;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper {
+    background-color: #ffffff;
+    color: #FFA500;
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    section {
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }

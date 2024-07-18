@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Process - Happy Pets</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<style>
+	body {
+    font-family: Arial, sans-serif;
+    color:darkorange;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.adoption-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.adoption-form h2 {
+    margin-bottom: 20px;
+}
+
+.adoption-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.adoption-form input,
+.adoption-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.adoption-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+	</style>
+</head>
+<body>
+    <header>
+        <h1>Pet Adoption Process</h1>
+    </header>
+    <section class="adoption-form">
+        <h2>Adoption Form</h2>
+        <form action="{{ url_for('submit_adoption') }}" method="post">
+            <label for="user_name">Username:</label>
+            <input type="text" id="user_name" name="user_name" required><br><br>
+            
+            <label for="adopted_dog">Adopted Dog:</label>
+            <input type="text" id="adopted_dog" name="adopted_dog"><br><br>
+            
+            <label for="adopted_cat">Adopted Cat:</label>
+            <input type="text" id="adopted_cat" name="adopted_cat"><br><br>
+            
+            <label for="user_address">Address:</label>
+            <input type="text" id="user_address" name="user_address" required><br><br>
+            
+            <label for="contact_number">Contact Number:</label>
+            <input type="tel" id="contact_number" name="contact_number"><br><br>
+            
+            <label for="Email_ID">Email:</label>
+            <input type="Email_ID" id="Email_ID" name="Email_ID"><br><br>
+            
+            <label for="confirmation">Confirmation:</label>
+            <select id="confirmation" name="confirmation" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Happy Pets. All rights reserved.</p>
+    </footer>
+</body>
+</html>

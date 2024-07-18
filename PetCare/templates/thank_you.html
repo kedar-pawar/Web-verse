@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .dog-animation {
+            max-width: 200px;
+            height: auto;
+            animation: dogHoldMail 2s infinite alternate;
+        }
+        @keyframes dogHoldMail {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="dog-animation" src="https://media.tenor.com/6qrEqrf8va4AAAAi/animal-puppy.gif" alt="Dog holding mail">
+        <p>Thank you for your feedback!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+  /******for about us page******/
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+  }
+  body{
+    width: 99%;
+    height: 97%;
+    background-image: url('/static/images/Background2.png');
+    background-size:cover;
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    align-items:center;
+    padding:0px 40px;
+  }
+  .logo{
+    font-size: 50px;
+    color:orange;
+    font-style: italic;
+  }
+  .nav{
+    position: relative;
+    left:-140px;
+  }
+  a{
+    padding:5px 15px;
+    color:orange;
+    font-size: 20px;
+    text-decoration:none;
+  }
+  a:hover{
+    color:white;
+    text-decoration: underline;
+    text-underline-position:under;
+  }
+  .search{
+    font-size: 25px;
+  }
+  .search i{
+    padding:5px 20px;
+  }
+  .search i:hover{
+    color:white;
+  }
+  #aboutUs {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #aboutUs img {
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .content {
+    margin: 20px 0;
+  }
+  
+  .content h2 {
+    font-size: 50px;
+    color: #FFA500;
+  }
+  
+  
+  p {
+    color: #ffff;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+  
+  
+  @media screen and (max-width: 790px) {
+    #aboutUs img {
+        width: 100%;
+    }
+  
+    #aboutUs {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+  }
+  

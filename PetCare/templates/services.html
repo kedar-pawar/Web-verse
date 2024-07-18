@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Petcare Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Services Section</title>
+    <!-- Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    </head>
+    <body>
+        <div class="top">
+            <div class="logo">Happy Pets</div>
+            <div class="nav">
+              <a href="{{ url_for('home') }}">Home</a>
+              <a href="{{ url_for('services') }}">Services</a>
+              <a href="{{ url_for('about') }}">About</a>
+              <a href="{{ url_for('team') }}">Team</a>
+              <a href="{{ url_for('contact') }}">Contact</a>
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-search"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="section-header">
+            <h2>Our Services</h2>
+        </div>
+                  
+                  <div class="row">
+                    <div class="column">
+                      <div class="card">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-cat"></i>
+                        </div>
+                        <h3>For Cats</h3>
+                        <p>
+                            “Time spent with cats is never wasted.” “What greater gift than the love of a cat?” you provide them with food and water and shelter and affection..
+                        </p>
+                        <a href="{{ url_for('cats') }}"><button class="button" role="button">Services</button></a>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <div class="icon-wrapper">
+                          <i class="fas fa-dog"></i>
+                        </div>
+                        <h3>For Dogs</h3>
+                        <p>
+                            “Owners of dogs will have noticed that, if you provide them with food and water and shelter and affection, they will think you are god.
+                        </p>
+                        <a href="{{ url_for('dogs') }}"><button class="button" role="button">Services</button></a>
+                    </div>
+                  </div>
+                  </div>
+                </section>
+              </body>
+            </html>
+            
